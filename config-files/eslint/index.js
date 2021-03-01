@@ -31,6 +31,7 @@ module.exports = {
         // https://eslint.org/docs/rules/
 
         "array-bracket-spacing": [ 2, "always", { objectsInArrays: false, arraysInArrays: false }],
+        "array-bracket-newline": [ 2, "consistent" ],
         "brace-style": [ 2, "stroustrup", { allowSingleLine: true } ],
         "comma-dangle": ["error", {
             "arrays": "always-multiline",
