@@ -38,7 +38,7 @@ module.exports = {
             "objects": "always-multiline",
             "imports": "always-multiline",
             "exports": "always-multiline",
-            "functions": "only-multiline"
+            "functions": "only-multiline",
         }],
         indent: [ 2, 4 ],
         curly: 2,
@@ -89,11 +89,14 @@ module.exports = {
         "@typescript-eslint/semi": [ "error" ],
 
         // disables
+        "arrow-body-style": 0,
+        "lines-between-class-members": 0,
         "no-await-in-loop": 0,
         "no-continue": 0,
         "no-underscore-dangle": 0,
         "no-inner-declarations": 0,
         "no-plusplus": 0,
+        "padded-blocks":  0,
         "prefer-destructuring": 0,
         "prefer-template": 0,
 
@@ -107,13 +110,19 @@ module.exports = {
 
         ///// TypeScript rules
 
-        "@typescript-eslint/explicit-function-return-type": 2,
+        "@typescript-eslint/explicit-function-return-type": [ 2, { allowExpressions: true } ],
         "@typescript-eslint/no-base-to-string": 2,
+        "@typescript-eslint/no-floating-promises": 2,
+        "@typescript-eslint/no-inferrable-types": [ 2, { ignoreParameters: true }],
         "@typescript-eslint/no-require-imports": 2,
+        "@typescript-eslint/no-unused-vars": [ 2, { argsIgnorePattern: "(^_)" } ],
         "@typescript-eslint/no-unnecessary-condition": 2,
         "@typescript-eslint/prefer-for-of": 2,
         "@typescript-eslint/prefer-readonly": 2,
         "@typescript-eslint/prefer-string-starts-ends-with": 2,
+        "@typescript-eslint/strict-boolean-expressions": [ 2,
+            { allowNumber: false, allowAny: true, allowNullableBoolean: true, allowNullableString: true }
+        ],
         "@typescript-eslint/switch-exhaustiveness-check": 2,
         "@typescript-eslint/typedef": [ 2, { parameter: true }],
 
